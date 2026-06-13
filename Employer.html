@@ -13,7 +13,7 @@
 			$.ajax({
 				url:"https://api.apispreadsheets.com/data/bGXVd2GLiNhwtY8N/",
 				type:"post",
-				data:$("#myForm").serializeArray(),
+				data: $("#myForm").serialize(),
 				success: function(){
 					alert("Form Data Submitted :)")
 				},
