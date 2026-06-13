@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>non-profit recruitment company</title>
+	<link rel="stylesheet" href="style.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/PwmB3FGZGtBOa4AT/',
+        headers: {"accessKey": "YOUR_ACCESS_KEY", "secretKey": "YOUR_ACCESS_KEY"},
+        type:'post',
+        data:$("#Form").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+</head>
+<body>
+
+
+<ul class="nav-links">
+  <a href="index.html" class="logo">non-profit recruitment company</a>
+</ul>
+  
+<section id="home">
+
+  <div class="welcome-card">
+    
+    <h1>Welcome</h1>
+
+    <p>Please select an option</p >
+
+    <div class="welcome-buttons">
+
+      <a href="New.html" class="welcome-btn">
+        I'm New Here
+      </a >
+
+      <a href="Employer.html" class="welcome-btn">
+        I'm An Employer
+      </a >
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+
+</html>

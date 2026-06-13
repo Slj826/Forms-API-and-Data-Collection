@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>non-profit recruitment company</title>
+	<link rel="stylesheet" href="style.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/bGXVd2GLiNhwtY8N/',
+        headers: {"accessKey": "YOUR_ACCESS_KEY", "secretKey": "YOUR_ACCESS_KEY"},
+        type:'post',
+        data:$("#Form").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+
+<ul class="nav-links">
+  <a href="index.html" class="logo">non-profit recruitment company</a>
+  <li><a href="index.html" class="a-item">Back</a></li>
+  <li><a href="#Join" class="a-item">Join Us</a></li>
+  <li><a href="#Career Opportunities" class="a-item">Career Opportunities</a></li>
+</ul>
+
+
+</nav>
+
+<section id="Join" class="section">
+  
+  <h2>Join Us</h2>
+  
+  <p class="description">To create a job listing, please complete the form below.</p>
+
+  <form id="Form">
+
+    <label>Job Title</label>
+    <input name="Job Title">
+
+    <label>Requisition ID</label>
+    <input name="Requisition ID">
+
+    <label>Salary</label>
+    <input name="Salary">
+
+    <label>Job Type</label>
+    <select name="Job Type">
+      <option>Full-Time</option>
+      <option>Part-Time</option>
+    </select>
+
+    <label>Education Requirement</label>
+    <select name="Education Requirement">
+      <option>High School</option>
+      <option>Post-Secondary</option>
+      <option>Trade / Professional School</option>
+      <option>Other</option>
+    </select>
+
+    <label>Application Method</label>
+    <input name="Application Method">
+
+    <label>Street Number & Name</label>
+    <input name="Street Number & Name">
+
+    <label>City</label>
+    <input name="City">
+
+    <label>Province</label>
+    <input name="Province">
+
+    <label>Postal Code</label>
+    <input name="Postal Code">
+
+    <label>Job Description & Requirements</label>
+    <textarea name="Job Description & Requirements"></textarea>
+
+    <button type="button" onclick="SubForm()">
+      Submit
+    </button>
+
+  </form>
+
+</section>
+
+
+<section id="Career Opportunities" class="section">
+  
+  <h2>Career Opportunities</h2>
+
+  <div class="job-grid">
+
+    <div class="job-card">
+      <h3>???</h3>
+      <p>???<br>
+      Bc<br>
+      $1/year</p>
+    </div>
+
+    <div class="job-card">
+      <h3>???</h3>
+      <p>???<br>
+      Bc<br>
+      $5/year</p>
+    </div>
+
+    <div class="job-card">
+      <h3>???</h3>
+      <p>???<br>
+      Bc<br>
+      $4/year</p>
+    </div>
+
+    <div class="job-card">
+      <h3>???</h3>
+      <p>???<br>
+      Bc<br>
+      $3/year</p>
+    </div>
+
+    <div class="job-card">
+      <h3>???</h3>
+      <p>???<br>
+      Bc<br>
+      $2/year</p>
+    </div>
+
+    <div class="job-card">
+      <h3>???</h3>
+      <p>???<br>
+      Bc<br>
+      $0/year</p>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+
+</html>
