@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<title>non-profit recruitment company</title>
 	<link rel="stylesheet" href="style.css">
-  <script
+	<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous"></script>
-		<script>
+	<script>
 		function SubForm (){
 			$.ajax({
 				url:"https://api.apispreadsheets.com/data/bGXVd2GLiNhwtY8N/",
@@ -47,22 +47,22 @@
   <form id="myForm">
 
     <label>Job Title</label>
-    <input name="Job Title">
+    <input name="job_title">
 
     <label>Requisition ID</label>
-    <input name="Requisition ID">
+    <input name="requisition_iD">
 
     <label>Salary</label>
-    <input name="Salary">
+    <input name="salary">
 
     <label>Job Type</label>
-    <select name="Job Type">
+    <select name="job_type">
       <option>Full-Time</option>
       <option>Part-Time</option>
     </select>
 
     <label>Education Requirement</label>
-    <select name="Education Requirement">
+    <select name="education_requirement">
       <option>High School</option>
       <option>Post-Secondary</option>
       <option>Trade / Professional School</option>
@@ -70,22 +70,22 @@
     </select>
 
     <label>Application Method</label>
-    <input name="Application Method">
+    <input name="application_method">
 
     <label>Street Number & Name</label>
-    <input name="Street Number & Name">
+    <input name="street_number_&_name">
 
     <label>City</label>
-    <input name="City">
+    <input name="city">
 
     <label>Province</label>
-    <input name="Province">
+    <input name="province">
 
     <label>Postal Code</label>
-    <input name="Postal Code">
+    <input name="postal_code">
 
     <label>Job Description & Requirements</label>
-    <textarea name="Job Description & Requirements"></textarea>
+    <textarea name="job_description_&_requirements"></textarea>
 
     <button type="button" onclick="SubForm()">
       Submit
