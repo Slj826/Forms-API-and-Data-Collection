@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Save Web Form Data to Spreadsheets</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/oayCJrMmbkRi7JmT/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+	<form id="myForm">
+		<label>job_title</label>
+		<input name="job_title" />
+		<br/>
+		<label>requisition_iD</label>
+		<input name="requisition_iD" />
+		<br/>
+		<label>salary</label>
+		<input name="salary" />
+		<br/>
+		<label>job_type</label>
+		<input name="job_type" />
+		<br/>
+		<label>education_requirement</label>
+		<input name="education_requirement" />
+		<br/>
+		<label>application_method</label>
+		<input name="application_method" />
+		<br/>
+		<label>street_number_&_name</label>
+		<input name="street_number_&_name" />
+		<br/>
+		<label>city</label>
+		<input name="city" />
+		<br/>
+		<label>province</label>
+		<input name="province" />
+		<br/>
+		<label>postal_code</label>
+		<input name="postal_code" />
+		<br/>
+		<label>job_description_&_requirements</label>
+		<input name="job_description_&_requirements" />
+		<br/>
+	</form>
+	<button onclick='SubForm()'>Submit</button>
+</body>
+</html>

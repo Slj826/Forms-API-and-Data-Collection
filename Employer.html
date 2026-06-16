@@ -11,9 +11,12 @@
 	<script>
 		function SubForm (){
 			$.ajax({
-				url:"https://api.apispreadsheets.com/data/bGXVd2GLiNhwtY8N/",
+				url:"https://api.apispreadsheets.com/data/O433YaSO4pCpvTJ9/",
 				type:"post",
-				data: $("#myForm").serialize(),
+				data:$("#Form").serializeArray(),
+				headers:{
+					accessKey: "71157ebcfe19778b0a2f50dfcd4e0466",
+					secretKey: "ba8bd65ee0bb8cfd7d0aa85fa336738d"},
 				success: function(){
 					alert("Form Data Submitted :)")
 				},
@@ -26,6 +29,7 @@
 </head>
 <body>
 
+
 <nav class="navbar">
 
 
@@ -37,6 +41,7 @@
 </ul>
 
 </nav>
+
 
 <section id="Job Listings" class="section">
   
@@ -91,13 +96,15 @@
 </section>
 
 
+
+
 <section id="Hiring Portal" class="section">
   
   <h2>Hiring Portal</h2>
   
   <p class="description">To create a job listing, please complete the form below.</p>
 
-  <form id="myForm">
+  <form id="Form">
 
     <label>Job Title</label>
     <input name="job_title">
@@ -126,25 +133,25 @@
     <input name="application_method">
 
     <label>Street Number & Name</label>
-    <input name="street_number_&_Name">
+    <input name="street_number_&_name">
 
     <label>City</label>
     <input name="city">
 
     <label>Province</label>
-    <input name="Province">
+    <input name="province">
 
     <label>Postal Code</label>
     <input name="postal_code">
 
     <label>Job Description & Requirements</label>
-    <textarea name="Job Description & Requirements"></textarea>
+    <textarea name="job_description_&_requirements"></textarea>
 
-    <button type="button" onclick="SubForm()">
-      Submit
-    </button>
+    
 
   </form>
+
+  <button onclick='SubForm()'>Submit</button>
 
 </section>
 
